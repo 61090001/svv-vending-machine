@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-@Model(file  = "VendingMachineV1.json")
+@Model(file  = "VendingMachineV2.json")
 public class VendingMachineAdapterSelenium extends ExecutionContext {
     WebDriver driver;
     static final float PRICE_TUM_THAI = 100.0f;
@@ -189,6 +189,11 @@ public class VendingMachineAdapterSelenium extends ExecutionContext {
     @Edge()
     public void payRetry() {
         System.out.println("Edge payRetry");
+    }
+
+    @Edge()
+    public void redirect() {
+        System.out.println("Edge redirect");
     }
 
     @Vertex()
